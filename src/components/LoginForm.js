@@ -1,5 +1,6 @@
 import { Toggeable } from "./Toggeable";
 import { useState } from "react";
+import PropTypes from 'prop-types';
 export const LoginForm = ({ handleSubmit }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -36,3 +37,8 @@ export const LoginForm = ({ handleSubmit }) => {
     </Toggeable>
   );
 };
+
+
+LoginForm.propTypes={
+  handleSubmit: PropTypes.func.isRequired
+}
